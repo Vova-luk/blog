@@ -31,4 +31,5 @@ type Comment struct {
 	PostId    uint      `gorm:"not null" json:"post_id"`
 	Content   string    `json:"content"`
 	CreatedAt time.Time `gorm:"autoCreateTime" json:"created_at"`
+	UpdatedAt time.Time `gorm:"autoUpdateTime" json:"updated_at"`
 }
