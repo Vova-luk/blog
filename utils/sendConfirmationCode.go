@@ -13,7 +13,7 @@ func SendEmail(email string, code string) error {
 	smtpHost := os.Getenv("SMTP_HOST")
 	smtpPort := 465
 	senderEmail := os.Getenv("EMAIL_USER")
-	senderPassword := "EMAIL_PASSWORD"
+	senderPassword := os.Getenv("EMAIL_PASSWORD")
 
 	message := gomail.NewMessage()
 	message.SetHeader("From", senderEmail)
